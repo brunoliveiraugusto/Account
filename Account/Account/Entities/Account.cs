@@ -11,5 +11,10 @@ namespace Account.Entities
         public int Number { get; set; }
 
         public abstract void Withdraw(double amount);
+
+        public virtual void Deposit(double amount)
+        {
+            this.Balance += amount;
+        }
     }
 }
